@@ -15,12 +15,12 @@ public class SimplePlatformController : MonoBehaviour {
 	public bool grounded = false;
 	Animator anim;
 	Rigidbody2D rb;
-	public Vector2 gravity;
 
 	// Use this for initialization
 	void Awake () {
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
+
 	}
 	
 	// Update is called once per frame
@@ -33,6 +33,7 @@ public class SimplePlatformController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+
 		float h = Input.GetAxis("Horizontal");
 
 		anim.SetFloat("Speed", Mathf.Abs(h));
