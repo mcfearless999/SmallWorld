@@ -59,7 +59,6 @@ public class SimplePlatformController : MonoBehaviour {
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
-		Debug.Log(theScale);
 		transform.localScale = theScale;
 	}
 }

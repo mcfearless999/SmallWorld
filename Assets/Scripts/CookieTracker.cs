@@ -7,6 +7,8 @@ public class CookieTracker : MonoBehaviour {
 	public int bigCookies;
 	public int smallCookies;
 
+	public UnityEngine.UI.Text text;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,10 +20,14 @@ public class CookieTracker : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D c) {
-		Debug.Log(c.tag);
 		if(c.tag == "BigCookie") {
 			bigCookies++;
 			Destroy(c.gameObject);
 		}
+		if(c.tag == "SmallCookie") {
+			smallCookies++;
+			Destroy(c.gameObject);
+		}
+		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 	}
 }
