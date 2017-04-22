@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 58524780049301500}
   - component: {fileID: 95156144748940446}
   m_Layer: 0
-  m_Name: BigCookie
-  m_TagString: BigCookie
+  m_Name: SmallCookie
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6fb851a1ecf4f4455a98d528be445082, type: 2}
+  - {fileID: 2100000, guid: a7ad54f149b0f438487755f710145b6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

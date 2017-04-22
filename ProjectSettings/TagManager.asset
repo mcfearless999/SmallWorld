@@ -15,6 +15,7 @@ TagManager:
   - HealthBar
   - Planet
   - BigCookie
+  - SmallCookie
   layers:
   - Default
   - TransparentFX
