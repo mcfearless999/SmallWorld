@@ -15,6 +15,7 @@ public class SimplePlatformController : MonoBehaviour {
 	public bool grounded = false;
 	Animator anim;
 	Rigidbody2D rb;
+	public Vector2 gravity;
 
 	// Use this for initialization
 	void Awake () {
@@ -52,6 +53,12 @@ public class SimplePlatformController : MonoBehaviour {
 			rb.AddForce(new Vector2(0f, jumpForce));
 			jump = false;
 		}
+//		Physics2D.gravity = (-1 * transform.position.normalized);
+//		gravity = Physics2D.gravity;
+//		if(grounded) {
+//			transform.Rotate(Vector3.up, Mathf.Rad2Deg * ( Mathf.Atan2(transform.position.x, transform.position.y)));
+//		}
+		//transform.rotation =  Quaternion.Euler( new Vector3(0, 0, -1 * (transform.position.y / transform.position.x)));
 	}
 	 
 	public void Flip() {
