@@ -16,6 +16,7 @@ TagManager:
   - Planet
   - BigCookie
   - SmallCookie
+  - TriggerText
   layers:
   - Default
   - TransparentFX

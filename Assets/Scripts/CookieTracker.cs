@@ -28,6 +28,11 @@ public class CookieTracker : MonoBehaviour {
 			smallCookies++;
 			Destroy(c.gameObject);
 		}
+		if(c.tag == "TriggerText") {
+			if(bigCookies + smallCookies > 0) {
+				c.GetComponentInChildren<MeshRenderer>().enabled = true;
+			}
+		}
 		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 	}
 }
