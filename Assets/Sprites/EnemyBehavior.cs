@@ -21,7 +21,7 @@ public class EnemyBehavior : MonoBehaviour {
 	{
 		transform.Translate(speed*Time.deltaTime,0,0);
 
-		if(Mathf.Abs(origX - transform.position.x) > 4.0f)
+		if(Mathf.Abs(origX - transform.position.x) > 5.0f)
 		{
 			
 			speed *= -1.0f; //change direction
