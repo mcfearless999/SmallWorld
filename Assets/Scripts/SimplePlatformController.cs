@@ -13,6 +13,7 @@ public class SimplePlatformController : MonoBehaviour {
 	public Transform groundCheck;
 
 	public bool grounded = false;
+	public bool killMonster = false;
 	Animator anim;
 	Rigidbody2D rb;
 
@@ -26,10 +27,13 @@ public class SimplePlatformController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+		killMonster = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Monster"));
+
 
 		if(Input.GetButtonDown("Jump") && grounded) {
 			jump = true;
 		}
+		
 	}
 
 	void FixedUpdate() {
