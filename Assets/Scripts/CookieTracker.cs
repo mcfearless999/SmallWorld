@@ -75,20 +75,8 @@ public class CookieTracker : MonoBehaviour {
 		if(c.tag == "Monster") {
 			if(spc.killMonster) {
 				Debug.Log("I killed monster!");
-				GameObject g1 = Instantiate(bigCookiePrefab);
-				GameObject g2 = Instantiate(smallCookiePrefab);
 
-				g1.GetComponentInChildren<CircleCollider2D>().isTrigger = false;
-				g2.GetComponentInChildren<CircleCollider2D>().isTrigger = false;
-
-				g1.transform.position = c.transform.position;
-				g2.transform.position = c.transform.position;
-
-				g1.AddComponent<Rigidbody2D>();
-				g2.AddComponent<Rigidbody2D>();
-
-				g1.GetComponentInChildren<Rigidbody2D>().AddForce(new Vector2(10f, 10f));
-				g2.GetComponentInChildren<Rigidbody2D>().AddForce(new Vector2(-10f, 10f));
+				SpawnCookies(c.gameObject.transform.position);
 
 				Destroy(c.gameObject);
 			} else {
@@ -99,5 +87,27 @@ public class CookieTracker : MonoBehaviour {
 		}
 		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 		//Debug.Log(string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies));
+	}
+	void SpawnCookies(Vector2 p) {
+		float force = 30f;
+		float offset = 5f;
+
+		GameObject g1 = Instantiate(bigCookiePrefab);
+		GameObject g2 = Instantiate(smallCookiePrefab);
+
+		g1.GetComponentInChildren<CircleCollider2D>().isTrigger = false;
+		g2.GetComponentInChildren<CircleCollider2D>().isTrigger = false;
+
+		Vector2 p1 = p; p1.x += offset;
+		Vector2 p2 = p; p2.x -= offset;
+
+		g1.transform.position = p;
+		g2.transform.position = p;
+
+		g1.AddComponent<Rigidbody2D>();
+		g2.AddComponent<Rigidbody2D>();
+
+		g1.GetComponentInChildren<Rigidbody2D>().AddForce(new Vector2(force, force));
+		g2.GetComponentInChildren<Rigidbody2D>().AddForce(new Vector2(-force, force));
 	}
 }
