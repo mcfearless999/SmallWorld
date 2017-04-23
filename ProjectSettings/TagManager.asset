@@ -17,6 +17,7 @@ TagManager:
   - BigCookie
   - SmallCookie
   - TriggerText
+  - Monster
   layers:
   - Default
   - TransparentFX
