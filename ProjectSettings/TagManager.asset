@@ -20,6 +20,7 @@ TagManager:
   - Monster
   - NextLevel
   - PrevLevel
+  - Breakable
   layers:
   - Default
   - TransparentFX

@@ -387,6 +387,7 @@ MonoBehaviour:
   jumpForce: 1000
   groundCheck: {fileID: 4482011885052334}
   grounded: 0
+  killMonster: 0
 --- !u!114 &114740400427381964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -395,9 +396,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1171768409955842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 13381460c594b479e8d41a692a78d370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bigCookies: 0
+  smallCookies: 0
+  bigCookiePrefab: {fileID: 1914550354982884, guid: d091f87c9b1c543f2b8e5d0a9f9b1dcc,
+    type: 2}
+  smallCookiePrefab: {fileID: 1914550354982884, guid: d2629ec5adf524aa1997088166cc0681,
+    type: 2}
+  text: {fileID: 0}
+  blowBackForce: 5000
 --- !u!124 &124284612199930622
 Behaviour:
   m_ObjectHideFlags: 1

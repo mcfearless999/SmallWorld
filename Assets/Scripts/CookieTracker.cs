@@ -6,6 +6,7 @@ public class CookieTracker : MonoBehaviour {
 
 	public int bigCookies;
 	public int smallCookies;
+	public int scale;
 
 	public GameObject bigCookiePrefab;
 	public GameObject smallCookiePrefab;
@@ -32,6 +33,8 @@ public class CookieTracker : MonoBehaviour {
 				transform.localScale = newScale;
 				spc.jumpForce *=2;
 				text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
+				scale++;
+				Camera.main.orthographicSize += 2;
 			}
 		}
 		if(Input.GetButtonDown("Fire2")) {
@@ -44,6 +47,8 @@ public class CookieTracker : MonoBehaviour {
 				transform.localScale = newScale;
 				spc.jumpForce /=2;
 				text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
+				scale--;
+				Camera.main.orthographicSize -= 2;
 			}
 		}
 	}
@@ -55,6 +60,9 @@ public class CookieTracker : MonoBehaviour {
 		if(c.gameObject.tag == "SmallCookie") {
 			smallCookies++;
 			Destroy(c.gameObject);
+		}
+		if(c.gameObject.tag == "Breakable") {
+			c.gameObject.GetComponentInChildren<Breakable>().Break(scale);
 		}
 		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 
@@ -82,7 +90,7 @@ public class CookieTracker : MonoBehaviour {
 				EnemyBehavior eb = c.GetComponentInChildren<EnemyBehavior>();
 				eb.KillMe();
 			} else {
-				Debug.Log("I got killed!");
+				//Debug.Log("I got killed!");
 				Vector2 f;
 				if(spc.facingRight) {
 					f = new Vector2(-blowBackForce, 100f);
@@ -95,7 +103,6 @@ public class CookieTracker : MonoBehaviour {
 					SpawnCookies(transform.position);
 				}
 				GetComponentInChildren<Rigidbody2D>().AddForce(f);
-				// Do kill thing here
 			}
 			
 		}
@@ -106,7 +113,7 @@ public class CookieTracker : MonoBehaviour {
 		}
 		if(c.tag == "PrevLevel") {
 			UnityEngine.SceneManagement.Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-			int nextLevel = scene.buildIndex - 1;
+			int nextLevel = scene.buildIndex; // Used to scene.buildIndex - 1 but it is too frustrating to be sent back to the prev level
 			if(nextLevel < 0) {
 				nextLevel = 0;	// Level -1 is only for Mario
 			}
