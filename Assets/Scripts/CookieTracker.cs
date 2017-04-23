@@ -29,6 +29,7 @@ public class CookieTracker : MonoBehaviour {
 				newScale.y *= 2;
 				transform.localScale = newScale;
 				spc.jumpForce *=2;
+				text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 			}
 		}
 		if(Input.GetButtonDown("Fire2")) {
@@ -40,6 +41,7 @@ public class CookieTracker : MonoBehaviour {
 				newScale.y /= 2;
 				transform.localScale = newScale;
 				spc.jumpForce /=2;
+				text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 			}
 		}
 	}
@@ -52,6 +54,8 @@ public class CookieTracker : MonoBehaviour {
 			smallCookies++;
 			Destroy(c.gameObject);
 		}
+		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
+
 	}
 
 	void OnTriggerEnter2D(Collider2D c) {
@@ -94,6 +98,6 @@ public class CookieTracker : MonoBehaviour {
 			
 		}
 		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
-		Debug.Log(string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies));
+		//Debug.Log(string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies));
 	}
 }
