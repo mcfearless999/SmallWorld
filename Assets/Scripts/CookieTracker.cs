@@ -85,6 +85,21 @@ public class CookieTracker : MonoBehaviour {
 			}
 			
 		}
+		if(c.tag == "NextLevel") {
+			UnityEngine.SceneManagement.Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+			UnityEngine.SceneManagement.SceneManager.LoadScene(scene.buildIndex + 1);  	// Loads next scene in the index
+																						// Last scene has to not have a NextLevel
+		}
+		if(c.tag == "PrevLevel") {
+			UnityEngine.SceneManagement.Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+			int nextLevel = scene.buildIndex - 1;
+			if(nextLevel < 0) {
+				nextLevel = 0;	// Level -1 is only for Mario
+			}
+			UnityEngine.SceneManagement.SceneManager.LoadScene(nextLevel);  	// Loads next scene in the index
+																						// Last scene has to not have a NextLevel
+
+		}
 		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 		//Debug.Log(string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies));
 	}

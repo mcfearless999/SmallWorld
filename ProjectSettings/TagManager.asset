@@ -18,6 +18,8 @@ TagManager:
   - SmallCookie
   - TriggerText
   - Monster
+  - NextLevel
+  - PrevLevel
   layers:
   - Default
   - TransparentFX
