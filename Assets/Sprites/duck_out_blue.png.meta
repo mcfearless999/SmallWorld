@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 1d134c96f88404058afad7f479162cf0
+timeCreated: 1492982629
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: duck_out_blue_0
+    21300002: duck_out_blue_1
+    21300004: duck_out_blue_2
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: duck_out_blue_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 1013
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 232.16405, y: 579}
+        - {x: -217.78029, y: 579}
+        - {x: -506.5, y: 391.16043}
+        - {x: -506.5, y: 281.75934}
+        - {x: -500.5435, y: 263.18182}
+        - {x: -339.55423, y: 184.74332}
+        - {x: -323.0425, y: 190.93582}
+        - {x: -351.93802, y: 162.03743}
+        - {x: -409.72903, y: 164.1016}
+        - {x: -506.5, y: 93.919785}
+        - {x: -506.5, y: 19.609625}
+        - {x: -434.4966, y: -36.122993}
+        - {x: -275.57132, y: -579}
+        - {x: 430.3047, y: -579}
+        - {x: 506.5, y: -512.94653}
+        - {x: 506.5, y: -81.53476}
+        - {x: 401.40918, y: 525.33154}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: duck_out_blue_1
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 0
+        width: 1015
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -507.321, y: 579}
+        - {x: -507.321, y: -31.994652}
+        - {x: -344.2678, y: -579}
+        - {x: 506.08572, y: -579}
+        - {x: 507.5, y: -560.4224}
+        - {x: 507.5, y: 579}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: duck_out_blue_2
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 0
+        width: 1015
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 200.85411, y: 579}
+        - {x: -100.48476, y: 579}
+        - {x: -424.52725, y: 331.29947}
+        - {x: -507.08585, y: 186.80748}
+        - {x: -507.08585, y: -77.40642}
+        - {x: -284.1776, y: -525.33154}
+        - {x: -247.02626, y: -558.3583}
+        - {x: -106.67665, y: -579}
+        - {x: 481.55334, y: -579}
+        - {x: 507.5, y: -504.68982}
+        - {x: 507.5, y: 102.17647}
+        - {x: 421.69836, y: 484.04813}
+      - - {x: -505.02188, y: 358.13367}
+        - {x: -507.08585, y: 354.00534}
+        - {x: -507.08585, y: 347.81284}
+        - {x: -502.95792, y: 345.74866}
+        - {x: -494.70206, y: 345.74866}
+        - {x: -492.6381, y: 349.87698}
+        - {x: -492.6381, y: 356.06952}
+        - {x: -496.76602, y: 358.13367}
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

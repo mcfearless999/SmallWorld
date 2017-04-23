@@ -13,6 +13,8 @@ public class CookieTracker : MonoBehaviour {
 	public UnityEngine.UI.Text text;
 	SimplePlatformController spc;
 
+	public float blowBackForce = 5000f;
+
 	// Use this for initialization
 	void Start () {
 		spc = GetComponentInChildren<SimplePlatformController>();
@@ -74,13 +76,25 @@ public class CookieTracker : MonoBehaviour {
 		}
 		if(c.tag == "Monster") {
 			if(spc.killMonster) {
-				Debug.Log("I killed monster!");
+				//Debug.Log("I killed monster!");
 
 				SpawnCookies(c.gameObject.transform.position);
-
-				Destroy(c.gameObject);
+				EnemyBehavior eb = c.GetComponentInChildren<EnemyBehavior>();
+				eb.KillMe();
 			} else {
 				Debug.Log("I got killed!");
+				Vector2 f;
+				if(spc.facingRight) {
+					f = new Vector2(-blowBackForce, 100f);
+				} else {
+					f = new Vector2(blowBackForce, 100f);
+				}
+				if(bigCookies > 1 && smallCookies > 1) {
+					bigCookies--;
+					smallCookies--;
+					SpawnCookies(transform.position);
+				}
+				GetComponentInChildren<Rigidbody2D>().AddForce(f);
 				// Do kill thing here
 			}
 			
