@@ -21,6 +21,7 @@ TagManager:
   - NextLevel
   - PrevLevel
   - Breakable
+  - Moon
   layers:
   - Default
   - TransparentFX

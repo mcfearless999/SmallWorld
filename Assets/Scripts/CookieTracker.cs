@@ -34,7 +34,7 @@ public class CookieTracker : MonoBehaviour {
 				spc.jumpForce *=2;
 				text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 				scale++;
-				Camera.main.orthographicSize += 2;
+				Camera.main.orthographicSize += 4;
 			}
 		}
 		if(Input.GetButtonDown("Fire2")) {
@@ -48,7 +48,7 @@ public class CookieTracker : MonoBehaviour {
 				spc.jumpForce /=2;
 				text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 				scale--;
-				Camera.main.orthographicSize -= 2;
+				Camera.main.orthographicSize -= 4;
 			}
 		}
 	}
@@ -119,8 +119,20 @@ public class CookieTracker : MonoBehaviour {
 			}
 			UnityEngine.SceneManagement.SceneManager.LoadScene(nextLevel);  	// Loads next scene in the index
 																						// Last scene has to not have a NextLevel
+		}
+		if(c.tag == "Moon") {
+			gameObject.GetComponentInChildren<Rigidbody2D>().isKinematic = true;
+			gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
+			c.GetComponentInChildren<MoonScript>().Activate();
+			Camera.main.transform.SetParent(c.transform);
+			Vector3 v= c.transform.position;
+			v.z -= 6;
+			Camera.main.transform.position = v;
+			gameObject.SetActive(false);
 
 		}
+
+
 		text.text = string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies);
 		//Debug.Log(string.Format("Big Cookies: {0} \nSmall Cookies: {1}", bigCookies, smallCookies));
 	}
